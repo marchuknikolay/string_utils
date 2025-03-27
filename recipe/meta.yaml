@@ -1,0 +1,24 @@
+package:
+    name: mmarchuk-string-utils
+    version: "0.1"
+  
+source:
+  git_url: https://github.com/marchuknikolay/string_utils
+  git_branch: main
+
+build:
+  number: 1
+
+requirements:
+  build:
+    - cmake
+    - ninja
+ 
+  run:
+    - boost
+    - gtest
+
+about:
+  home: https://github.com/marchuknikolay/string_utils
+  license: MIT
+  summary: Simple library with string utility functions
