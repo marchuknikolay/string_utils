@@ -18,3 +18,5 @@ target_link_libraries(${PROJECT_NAME}
     PUBLIC
         Boost::boost
 )
+
+add_subdirectory(test)
