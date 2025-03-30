@@ -3,20 +3,26 @@ package:
     version: "0.1"
   
 source:
-  git_url: https://github.com/marchuknikolay/string_utils
-  git_branch: main
+  path: ../
 
 build:
   number: 1
 
 requirements:
   build:
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
     - cmake
-    - ninja
- 
-  run:
+    - ninja 
     - boost
     - gtest
+
+test:
+  commands:
+    - test -f ${PREFIX}/lib/libstring_utils.a  # [not win]
+    - test -f ${PREFIX}/include/string_utils.h  # [not win]
+    - if not exist %PREFIX%\\Library\\lib\\libstring_utils.lib exit 1  # [win]
+    - if not exist %PREFIX%\\Library\\include\\string_utils.h exit 1  # [win]
 
 about:
   home: https://github.com/marchuknikolay/string_utils

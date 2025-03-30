@@ -19,4 +19,14 @@ target_link_libraries(${PROJECT_NAME}
         Boost::boost
 )
 
+install(
+    TARGETS ${PROJECT_NAME}
+    ARCHIVE DESTINATION lib
+)
+
+install(
+    DIRECTORY include/
+    DESTINATION include
+)
+
 add_subdirectory(test)
