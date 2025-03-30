@@ -1,6 +1,6 @@
 package:
-    name: mmarchuk-string-utils
-    version: "0.2"
+    name: mmarchuk_string_utils
+    version: "0.3"
   
 source:
   path: ../
@@ -19,9 +19,9 @@ requirements:
 
 test:
   commands:
-    - test -f ${PREFIX}/lib/libstring_utils.a  # [not win]
+    - test -f ${PREFIX}/lib/libmmarchuk_string_utils.a  # [not win]
     - test -f ${PREFIX}/include/string_utils.h  # [not win]
-    - if not exist %PREFIX%\\Library\\lib\\libstring_utils.lib exit 1  # [win]
+    - if not exist %PREFIX%\\Library\\lib\\libmmarchuk_string_utils.lib exit 1  # [win]
     - if not exist %PREFIX%\\Library\\include\\string_utils.h exit 1  # [win]
 
 about:
