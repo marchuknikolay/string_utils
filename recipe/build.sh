@@ -11,3 +11,5 @@ cmake .. \
     -DCMAKE_BUILD_TYPE=Release
 
 ninja install
+
+ctest --output-on-failure

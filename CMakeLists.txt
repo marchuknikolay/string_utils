@@ -29,4 +29,5 @@ install(
     DESTINATION include
 )
 
+enable_testing()
 add_subdirectory(test)
